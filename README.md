@@ -1,33 +1,32 @@
 # push_notifications
 
-A new Flutter project.
+Proyecto Flutter para recibir notificaciones push usando Firebase Messaging.
 
-## Getting Started
+## Requisitos
+- Flutter (estable) y `flutter` en PATH
+- Android SDK / Android Studio
+- Java (JDK) compatible con Gradle
+- Firebase CLI (`firebase`) y FlutterFire CLI (`flutterfire`)
+- Cuenta de Firebase y proyecto configurado
 
-This project is a starting point for a Flutter application.
+## Instalación rápida
+1. Abrir terminal en la raíz del proyecto:
+    - `cd D:\Dev_Mob_Push_Notifications`
+2. Instalar dependencias:
+    - `flutter pub add firebase_core`
+    - `flutter pub add firebase_messaging`
+    - `flutter pub get`
+3. Iniciar sesión en Firebase:
+    - `firebase login`
+4. Configurar Firebase para Flutter:
+    - `flutterfire configure`
+5. Colocar `google-services.json` en `android/app/`
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-En este caso vamos a trabajar con firebasea ello. 
-
-
-## Pasos 
-
-### 1. instalar dependencias
-
-flutter pub add firebase_core
-flutter pub add firebase_messaging
-
-### 2. iniciar sesión 
-firebase login
-
-### 3. configurar proyecto
-
-flutterfire configure
+## Cambios Android (resumen)
+- En `android/build.gradle` añadir en `dependencies`:
+    - `classpath 'com.google.gms:google-services:4.3.15'` (o versión recomendada)
+- En `android/app/build.gradle` al final:
+    - `apply plugin: 'com.google.gms.google-services'`
+- En `android/app/src/main/AndroidManifest.xml` asegurar permisos:
+  ```xml
+  <uses-permission android:name="android.permission.INTERNET"/>
