@@ -24,3 +24,10 @@ En este caso vamos a trabajar con firebasea ello.
 
 flutter pub add firebase_core
 flutter pub add firebase_messaging
+
+### 2. iniciar sesión 
+firebase login
+
+### 3. configurar proyecto
+
+flutterfire configure
