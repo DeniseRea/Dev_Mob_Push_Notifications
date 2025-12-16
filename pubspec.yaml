@@ -36,7 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_core: ^4.2.1
   firebase_messaging: ^16.0.4
-  cloud_firestore: 6.1.0
+  cloud_firestore: ^6.1.0
+  flutter_local_notifications: ^17.2.3
+  timezone: ^0.9.4
+  shared_preferences: ^2.3.3
 
 dev_dependencies:
   flutter_test:
